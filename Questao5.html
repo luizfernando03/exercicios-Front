@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Checkboxes</title>
+    <script>
+        function verificarCheckboxes() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var checkedCount = 0;
+
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    checkedCount++;
+                }
+            });
+
+            var botao = document.getElementById('Botao');
+            botao.disabled = checkedCount < 2; //o botão é habilitado se tiver pelo menos 2 checkboxe estiverem marcados
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Selecione os itens</h2>
+        <form>
+            <label><input type="checkbox" onchange="verificarCheckboxes()"> Item 1</label><br>
+            <label><input type="checkbox" onchange="verificarCheckboxes()"> Item 2</label><br>
+            <label><input type="checkbox" onchange="verificarCheckboxes()"> Item 3</label><br>
+            <label><input type="checkbox" onchange="verificarCheckboxes()"> Item 4</label><br>
+            <label><input type="checkbox" onchange="verificarCheckboxes()"> Item 5</label><br><br>
+            <button id="Botao" disabled>Botao/Liberado</button>
+        </form>
+    </div>
+
+    <br><br>
+    
+     <!-- Botão de retorno ao menu principal -->
+     <button onclick="window.location.href='menu.html'">Retornar ao Menu Principal</button>
+    </body>
+</body>
+</html>

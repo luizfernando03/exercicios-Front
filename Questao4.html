@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocultar/Mostrar Parágrafo</title>
+    <script>
+        function toggleTexto() {
+            var paragrafo = document.getElementById('meuParagrafo');
+            if (paragrafo.style.display === 'none') {
+                paragrafo.style.display = 'block'; // Mostra o parágrafo
+            } else {
+                paragrafo.style.display = 'none'; // Oculta o parágrafo
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2> Ocultar/Mostrar </h2>
+        <p id="meuParagrafo">Clique no botão para esconder esse texto, Clique novamente para mostrar o texto.</p>
+        <button onclick="toggleTexto()">Ocultar/Mostrar Texto</button>
+    </div>
+
+    <br><br>
+    
+     <!-- Botão de retorno ao menu principal -->
+     <button onclick="window.location.href='menu.html'">Retornar ao Menu Principal</button>
+    </body>
+</body>
+</html>

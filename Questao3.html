@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar Cor de Fundo</title>
+    <script>
+        function mudarCor(cor) {
+            document.body.style.backgroundColor = cor;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Escolha uma cor:</h2>
+        <label>
+            <input type="radio" name="cor" value="red" onclick="mudarCor('red')"> Vermelho
+        </label><br>
+        <label>
+            <input type="radio" name="cor" value="green" onclick="mudarCor('green')"> Verde
+        </label><br>
+        <label>
+            <input type="radio" name="cor" value="blue" onclick="mudarCor('blue')"> Azul
+        </label><br>
+        <label>
+            <input type="radio" name="cor" value="yellow" onclick="mudarCor('yellow')"> Amarelo
+        </label><br>
+    </div>
+
+    <br><br>
+    
+     <!-- Botão de retorno ao menu principal -->
+     <button onclick="window.location.href='menu.html'">Retornar ao Menu Principal</button>
+    </body>
+</body>
+</html>

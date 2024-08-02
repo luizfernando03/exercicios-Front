@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Transformar Texto</title>
+    <script>
+        function mudarCorFonte(cor) {
+            document.getElementById('paragrafo').style.color = cor;
+        }
+
+        function mudarCorFundo(cor) {
+            document.getElementById('paragrafo').style.backgroundColor = cor;
+        }
+a
+        function aumentarFonte() {
+            let paragrafo = document.getElementById('paragrafo');
+            paragrafo.style.fontSize = (parseInt(window.getComputedStyle(paragrafo).fontSize) + 2) + 'px';
+        }
+
+        function diminuirFonte() {
+            let paragrafo = document.getElementById('paragrafo');
+            paragrafo.style.fontSize = (parseInt(window.getComputedStyle(paragrafo).fontSize) - 2) + 'px';
+        }
+
+        function paraMaiusculas() {
+            document.getElementById('paragrafo').style.textTransform = 'uppercase';
+        }
+
+        function paraMinusculas() {
+            document.getElementById('paragrafo').style.textTransform = 'lowercase';
+        }
+    </script>
+</head>
+<body>
+    <h2>Transformar Texto</h2>
+    <p id="paragrafo">Modifique a cor da fonte, cor de fundo desta linha, como tambem alterando o tamanho da 
+        fonte e mudando para MAIÚSCULAS OU minúsculas, conforme for selecionando os botoes.</p>
+    
+    <button onclick="mudarCorFonte('black')">Fonte Preta</button>
+    <button onclick="mudarCorFonte('white')">Fonte Branca</button>
+    <button onclick="mudarCorFundo('blue')">Fundo Azul</button>
+    <button onclick="mudarCorFundo('yellow')">Fundo Amarelo</button>
+    
+    <br><br>
+    
+    <button onclick="aumentarFonte()">+</button>
+    <button onclick="diminuirFonte()">-</button>
+    
+    <br><br>
+    
+    <button onclick="paraMaiusculas()">MAIÚSCULAS</button>
+    <button onclick="paraMinusculas()">minúsculas</button>
+</body>
+
+<br><br>
+
+ <!-- Botão de retorno ao menu principal -->
+ <button onclick="window.location.href='menu.html'">Retornar ao Menu Principal</button>
+</body>
+</html>

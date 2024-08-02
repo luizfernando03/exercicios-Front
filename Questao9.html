@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <style>
+        body {
+            background-color: lightblue; /* Fundo azul claro */
+        }
+    </style>
+    <script>
+        function validarFormulario() {
+            let login = document.getElementById('login').value;
+            let senha = document.getElementById('senha').value;
+            let confirmarSenha = document.getElementById('confirmarSenha').value;
+
+            if (login === '' || senha === '' || confirmarSenha === '') {
+                alert('Preencha todos os campos!');
+                return false;
+            }
+
+            if (senha !== confirmarSenha) {
+                alert('Senha de confirmação diferente!');
+                return false;
+            }
+
+            if (senha.length < 6 || senha.length > 10) {
+                alert('A senha deve ter entre 6 e 10 caracteres!');
+                return false;
+            }
+
+            alert('Parabens, Login realizado com sucesso!'); // Mensagem de sucesso
+            return true; // Permite o envio do formulario
+        }
+    </script>
+</head>
+<body>
+    <h2>Cadastro de Usuário</h2>
+    <form onsubmit="return validarFormulario()">
+        <label>Login:</label>
+        <input type="text" id="login" required>
+        <br><br>
+        
+        <label>Senha:</label>
+        <input type="password" id="senha" required>
+        <br><br>
+        
+        <label>Confirmar Senha:</label>
+        <input type="password" id="confirmarSenha" required>
+        <br><br>
+        
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <br><br>
+    
+     <!-- Botão de retorno ao menu principal -->
+     <button onclick="window.location.href='menu.html'">Retornar ao Menu Principal</button>
+    </body>
+</body>
+</html>
